@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <title>NASA'S APOD</title>
+  </head>
+  <body>
+   <% if
+    (locals.data!= null) {%>
+      <div class=""><button class="prev-button">Previous</button></div>
+    <div class="page-centered">
+      <div class="center-responsive">
+       
+        <div class="explanation">
+          <div class="apod-title"><h1><%= locals.data.title %></h1></div>
+          <%= locals.data.explanation %></div>
+        <img src="<%= locals.data.url %>" />
+      </div>
+     
+    </div>
+    
+    <%} else {%> <% } %>
+`   </body>
+</html>
+ 
