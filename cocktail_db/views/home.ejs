@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <%- include("partials/header.ejs") %>
+  <body>
+    <h1 id="cocktail-name"><%= cocktail.name %></h1>
+    <div id="cocktail-img">
+      <img src="<%= cocktail.image %>" alt="<%= cocktail.name %>" />
+    </div>
+    <p>isAlcoholic? alcoholic: non-alcoholic <%=cocktail.isAlcoholic %></p>
+
+    <h2>Ingredients</h2>
+    <ul>
+      <% cocktail.ingredients.forEach(ingredient => { %>
+      <li><%= ingredient %></li>
+      <% }); %>
+    </ul>
+    <h3>Instructions</h3>
+    <p>Instructions: <%= cocktail.instructions %></p>
+    <p>Glass Type:<%= cocktail.glassType %></p>
+    <p>Category:<%= cocktail.category %></p>
+    <h3>Measures</h3>
+    <ul>
+      <% cocktail.measures.forEach(measure => { %>
+      <li><%= measure %></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
