@@ -1,8 +1,41 @@
-#cocktail-img,
 #cocktail-name {
   display: block;
   margin: auto;
   text-align: center;
 }
 
+#cocktail-img img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #333;    
+  border-radius: 20px;      
+  max-width: 100%;
+  height: fit-content;       
+  /* width: 800px;        
+  height: 600px;     
+  object-fit: cover;    */
+}
 
+/* Center text elements below the image */
+p, h2, h3, ul {
+  text-align: center;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* spacing between elements */
+h2, h3, p {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  #cocktail-img img {
+    width: 90%;    
+    height: 300px; 
+  }
+}
